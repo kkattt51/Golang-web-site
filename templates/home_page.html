@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/cover/cover.css">
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark" data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">My web-site</font></font></h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link active" aria-current="page" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Главная</font></font></a>
+                <a class="nav-link" href="/contacts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Контакты</font></font></a>
+                <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">О нас</font></font></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="px-3">
+        <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Гланая страница</font></font></h1>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Пользователь: {{ .Name }}<br>Возраст: {{ .Age }}<br>Деньги: {{ .Money }}</font><font style="vertical-align: inherit;"></font></font></p>
+
+        {{ if gt .Age 20 }}
+        <p class="lead">Приветик!</p>
+        {{ else }}
+        <p class="lead">А ты кто такой?</p>
+        {{ end }}
+
+            {{ range .Hobbies }}
+            <p class="lead"><b>{{ . }}</b></p>
+            {{ else }}
+            <p class="lead"><b>у нас нет записей</b></p>
+            {{ end }}
+        <p class="lead">
+
+            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Узнать больше</font></font></a>
+        </p>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Шаблон обложки для </font></font><a href="https://getbootstrap.com/" class="text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootstrap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> от </font></font><a href="https://twitter.com/mdo" class="text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@mdo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+    </footer>
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Переводчик"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Исходный текст</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Предложить лучший вариант перевода</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div>
+</body>
+</html>
